@@ -1,7 +1,7 @@
 const NOISE_DIFF = 40;
 
 let NUMBER_COLORS = 3;
-let NOISE_SCALE = 0.005;
+let NOISE_SCALE = 0.002;
 let CIRCLE_SCALE = 29;
 let CIRCLE_OP = 100;
 
@@ -29,7 +29,7 @@ function draw() {
 }
 
 function generatePalette() {
-  colorMode(HSB, 360, 100, 100);
+  colorMode(HSB, 360, 100, 100, 100);
   let palette = Array(NUMBER_COLORS); // Clear previous palette
   let baseHue = random(0, 360); // Starting hue
   let colorType = floor(random(4)); // 0: Analogous, 1: Complimentary, 2: Triadic, 3: Monochromatic

@@ -3,7 +3,7 @@ all:
 	processing-java --sketch='/Users/kewing/Desktop/splash' --run
 
 # Define custom target for running multiple times
-run:
+batch:
 	$(eval N := $(filter-out $@,$(MAKECMDGOALS)))
 	@$(foreach var,$(shell seq $(N)),processing-java --sketch='/Users/kewing/Desktop/splash' --run;)
 
